@@ -1,0 +1,122 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Styles */
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12pt;
+    color: beige;
+    text-align: center;
+}
+#error-message{
+    color: red;
+}
+body {
+    min-height: 100vh;
+    background-image: url('pexels-codioful-7135057 (1).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    background-color: lightblue;
+    height: 100vh;
+    width: 100%;
+    max-width: 40%;
+    margin-right: 40px;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+form {
+    width: min(400px, 100%);
+    margin-top: 20%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Added for spacing between fields */
+}
+
+form label {
+    background-color: blue;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-grow: 0.3;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+form input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    padding: 1rem;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: 2px solid transparent; /* Default border color */
+    border-left: none;
+    background-color: aliceblue;
+    transition: border-color 150ms ease;
+}
+
+form input:hover {
+    border-color: black;
+}
+
+form input:focus {
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    color: black !important;
+    margin-bottom: 10px;
+    border: 1px solid;
+    padding: 10px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 150ms ease;
+}
+
+form button:hover {
+    background-color: cornsilk;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
+
+form div.incorrect label {
+    background-color: red;
+}
+
+form div.incorrect input {
+    border-color: red;
+}
